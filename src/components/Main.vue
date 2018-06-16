@@ -11,6 +11,8 @@
           <button type="button" class="btn btn-primary" v-on:click="shortClick">Acortar</button>
           <p></p>
           <a v-bind:href="url_short" class="btn btn-link" target="_blank">{{url_short}}</a>
+          <p></p>
+          <router-link to="/all" class="btn btn-link">Ver todas las url</router-link>
         </div>
     </div>
   </div>
