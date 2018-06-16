@@ -38,6 +38,7 @@
 </template>
 
 <script>
+import config from "../appsettings";
 export default {
   data() {
     return {
@@ -65,7 +66,7 @@ export default {
         }
       });
 
-      xhr.open("POST", "http://localhost:3000/api/shortener/url");
+      xhr.open("POST", config.API_URL + "/shortener/url");
       xhr.setRequestHeader("Content-Type", "application/json");
 
       xhr.send(data);
@@ -98,7 +99,7 @@ export default {
         }
       });
 
-      xhr.open("POST", "http://localhost:3000/api/shortener/urlbulk");
+      xhr.open("POST", config.API_URL + "/shortener/urlbulk");
       xhr.setRequestHeader("Content-Type", "application/json");
 
       xhr.send(data);

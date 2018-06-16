@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import config from "../appsettings";
 export default {
   data() {
     return {
@@ -42,7 +43,7 @@ export default {
       }
     });
 
-    xhr.open("GET", "http://localhost:3000/api/shortener/urlall");
+    xhr.open("GET", config.API_URL + "/shortener/urlall");
 
     xhr.send(data);
     ///
